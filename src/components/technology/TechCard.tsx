@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useState } from 'react';
+
 import type { ITechnology } from '../../types/technologyTypes'
 
 
@@ -8,9 +10,16 @@ interface ITechCardProps{
 }
 
 const TechCard = ({technology}: ITechCardProps) => {
+
+    const [isAdded, setIsAdded] = useState(false);
+
+    const handleAdded=()=>{
+        setIsAdded(true);
+    }
+
     return (
         <>
-            <div className="card bg-base-100 w-96 shadow-sm ">
+            <div className="card bg-base-100 shadow-sm ">
                 <div className="card-body items-baseline">
                 <figure>
                   <img
@@ -29,7 +38,13 @@ const TechCard = ({technology}: ITechCardProps) => {
                     <div>{ technology.rating }</div>
                   </div>
                   <div className="card-actions">
-                    <button className='block text-center bg-black p-5 text-[#fff] leading-1'>Add To Stack</button>
+                    <button 
+                        className='block text-center bg-black p-5 text-[#fff] leading-1 cursor-pointer'
+                        disabled={ isAdded ? true : false }
+                        onClick={handleAdded}
+                    >
+                     { isAdded === true ? "Added" : "Add To Stack" }   
+                    </button>
                   </div>
                 </div>
             </div>        
