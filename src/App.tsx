@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner'
 import Technology from './components/technology/Technology';
+import Footer from './components/Footer';
 import type { ITechnology } from './types/technologyTypes';
 
 const dataFetch = async():Promise<ITechnology[]>=>{
@@ -26,7 +27,7 @@ function App() {
       <Suspense fallback={<h2>Loading...</h2>}>
         <Technology dataPromise={dataPromise} />
       </Suspense>
-      
+      <Footer />
     </>
   )
 }
