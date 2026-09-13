@@ -4,7 +4,7 @@
         "name": "React",
         "category": "Front-End",
         "description": "A declarative, component-based JavaScript library for building modern user interfaces",
-        "icon": "",
+        "icon": "../src/assets/react-icon.png",
         "rating": "4.9",
         "difficulty": "Beginner-Friendly",
         "badge": "Popular"
@@ -14,7 +14,7 @@
         "name": "Vue.js",
         "category": "Front-End",
         "description": "An approachable, performant, and versatile frameworks for building web user interfaces",
-        "icon": "",
+        "icon": "../src/assets/vue-js.png",
         "rating": "4.8",
         "difficulty": "Beginner-Friendly",
         "badge": "Versatile"
@@ -24,7 +24,7 @@
         "name": "Next.js",
         "category": "Front-End",
         "description": "The React framework for full-stack web applications with hybrid static & server rendering",
-        "icon": "",
+        "icon": "../src/assets/next-js.jpg",
         "rating": "4.9",
         "difficulty": "Intermediate",
         "badge": ""
@@ -34,7 +34,7 @@
         "name": "Node.js",
         "category": "Front-End",
         "description": "The React framework for full-stack web applications with hybrid static & server rendering",
-        "icon": "",
+        "icon": "../src/assets/node-js.png",
         "rating": "4.9",
         "difficulty": "Intermediate",
         "badge": ""        
@@ -44,7 +44,7 @@
         "name": "JavaScript",
         "category": "Language",
         "description": "The React framework for full-stack web applications with hybrid static & server rendering",
-        "icon": "",
+        "icon": "../src/assets/javascript.png",
         "rating": "4.9",
         "difficulty": "Beginner-Friendly",
         "badge": "Ubiquitous"
@@ -54,7 +54,7 @@
         "name": "TypeScript",
         "category": "Language",
         "description": "The React framework for full-stack web applications with hybrid static & server rendering",
-        "icon": "",
+        "icon": "../src/assets/typescript.png",
         "rating": "4.9",
         "difficulty": "Intermediate",
         "badge": "Essential"

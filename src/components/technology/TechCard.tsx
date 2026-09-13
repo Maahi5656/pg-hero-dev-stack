@@ -1,0 +1,41 @@
+import React from 'react';
+
+import type { ITechnology } from '../../types/technologyTypes'
+
+
+interface ITechCardProps{
+    technology: ITechnology;
+}
+
+const TechCard = ({technology}: ITechCardProps) => {
+    return (
+        <>
+            <div className="card bg-base-100 w-96 shadow-sm ">
+                <div className="card-body items-baseline">
+                <figure>
+                  <img
+                    className='h-[150px]'
+                    src={technology.icon}
+                    alt={technology.name} />
+                </figure>  
+                  <h2 className="card-title">
+                    { technology.name }
+                    <div className="badge badge-secondary">{ technology.badge }</div>
+                  </h2>
+                  <p>{ technology.description }</p>
+                  <div className="card-actions justify-start">
+                    <div className="badge badge-outline">{ technology.category }</div>
+                    <div className="badge badge-outline">{ technology.difficulty }</div>
+                    <div>{ technology.rating }</div>
+                  </div>
+                  <div className="card-actions">
+                    <button className='block text-center bg-black p-5 text-[#fff] leading-1'>Add To Stack</button>
+                  </div>
+                </div>
+            </div>        
+        </>
+
+    );
+};
+
+export default TechCard;
