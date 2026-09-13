@@ -2,11 +2,30 @@ import React from 'react';
 
 
 import logo from '../assets/logo-text.png'
+import hamburgermenu from '../assets/hamburger.png'
+import './Navbar.css'
 
 const Navbar = () => {
+
+    function openNav(){
+        const nav = document.getElementById("myNav")
+        
+        if(nav){
+            nav.style.width = "100%";
+        }
+    }
+
+    function closeNav(){
+        const nav = document.getElementById("myNav")
+        
+        if(nav){
+            nav.style.width = "0";
+        }
+    }
+
     return (
         <>
-            <nav className='flex pt-[24px] pb-[58px]'>
+            <nav className='navbar flex pt-[24px] pb-[58px]'>
                 <div className="container mx-[105px] flex items-center justify-between container">
                     <img className='w-[136px] h-[32px]' src={logo} alt="logo" />
 
@@ -21,6 +40,22 @@ const Navbar = () => {
                     <div className="flex items-center">
                         <button className='inline-block mx-[10px]'>Sign In</button>
                         <button className='inline-block mx-[10px] px-[20px] py-[10px] text-[14px]/ text-[#fff] bg-[#D91B7E] border-0 rounded-full'>Sign Up</button>
+                    </div>
+                </div>
+
+                <div className="mobile-menu">
+                    <span className='cursor-pointer' onClick={openNav}>
+                        <img src={hamburgermenu} alt="" />
+                    </span>
+                    <div className="overlay" id="myNav">
+                        <a href="javascript:void(0)" onClick={closeNav} className="closebtn">&times;</a>
+                        <div className="overlay-content">
+                            <a onClick={closeNav} href="index.html">Home</a>
+                            <a onClick={closeNav} href="about.html">About</a>
+                            <a onClick={closeNav} href="contact.html">Technologies</a>
+                            <a onClick={closeNav} href="products.html">Projects</a>
+                            <a onClick={closeNav} href="#">Contacts</a>
+                        </div>
                     </div>
                 </div>
             </nav>  

@@ -10,10 +10,10 @@ const Footer = () => {
                     <div>
                         <img src={logo} alt="" />
                         <p className='inline-block text-[#64748B] font-light mb-3'>Curated tools, technologies and resources for ddeveloping building modern software</p>
-                        <ul className='flex justify-between'>
-                            <li><b>GitHub</b></li>
-                            <li><b>Twitter</b></li>
-                            <li><b>LinkedIn</b></li>
+                        <ul className='flex'>
+                            <li><b className='pr-1'>GitHub</b></li>
+                            <li><b className='pr-1'>Twitter</b></li>
+                            <li><b className='pr-1'>LinkedIn</b></li>
                         </ul>
                     </div>    
                 </div>
