@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { use } from 'react'
 // import { useState } from 'react';
@@ -14,8 +14,11 @@ interface TechProps {
 
 const Technology = ({dataPromise}:TechProps) => {
 
+    const [selectedTech, setSelectedTech] = useState<ITechnology[]>([]);
 
     const technologyList = use(dataPromise);
+
+
 
     console.log(technologyList);
 
@@ -30,14 +33,14 @@ const Technology = ({dataPromise}:TechProps) => {
                             {
                                 technologyList.map((technology: ITechnology, index: number)=>{
                                     return (
-                                        <TechCard key={index} technology={technology}  />
+                                        <TechCard key={index} technology={technology} selectedTech={selectedTech} setSelectedTech={setSelectedTech}  />
                                     )
                                 })
                             }
                         </div>
                     </div>
                     <div className="min-w-0 flex-[1]">
-                        <TechStack />
+                        <TechStack selectedTech={selectedTech} setSelectedTech={setSelectedTech} />
                     </div>
                 </div>   
 

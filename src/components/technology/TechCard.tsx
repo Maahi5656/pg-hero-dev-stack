@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type Dispatch, type SetStateAction } from 'react';
 
 import { useState } from 'react';
 
@@ -7,14 +7,17 @@ import type { ITechnology } from '../../types/technologyTypes'
 
 interface ITechCardProps{
     technology: ITechnology;
+    selectedTech: ITechnology[];
+    setSelectedTech: Dispatch<SetStateAction<ITechnology[]>>;
 }
 
-const TechCard = ({technology}: ITechCardProps) => {
+const TechCard = ({technology, selectedTech, setSelectedTech}: ITechCardProps) => {
 
     const [isAdded, setIsAdded] = useState(false);
 
     const handleAdded=()=>{
         setIsAdded(true);
+        setSelectedTech([...selectedTech, technology]);
     }
 
     return (
