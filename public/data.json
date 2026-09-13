@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "React",
+        "category": "Front-End",
+        "description": "A declarative, component-based JavaScript library for building modern user interfaces",
+        "icon": "",
+        "rating": "4.9",
+        "difficulty": "Beginner-Friendly",
+        "badge": "Popular"
+    },
+    {
+        "id": 2,
+        "name": "Vue.js",
+        "category": "Front-End",
+        "description": "An approachable, performant, and versatile frameworks for building web user interfaces",
+        "icon": "",
+        "rating": "4.8",
+        "difficulty": "Beginner-Friendly",
+        "badge": "Versatile"
+    },
+    {
+        "id": 3,
+        "name": "Next.js",
+        "category": "Front-End",
+        "description": "The React framework for full-stack web applications with hybrid static & server rendering",
+        "icon": "",
+        "rating": "4.9",
+        "difficulty": "Intermediate",
+        "badge": ""
+    },
+    {
+        "id": 4,
+        "name": "Node.js",
+        "category": "Front-End",
+        "description": "The React framework for full-stack web applications with hybrid static & server rendering",
+        "icon": "",
+        "rating": "4.9",
+        "difficulty": "Intermediate",
+        "badge": ""        
+    },
+    {
+        "id": 5,
+        "name": "JavaScript",
+        "category": "Language",
+        "description": "The React framework for full-stack web applications with hybrid static & server rendering",
+        "icon": "",
+        "rating": "4.9",
+        "difficulty": "Beginner-Friendly",
+        "badge": "Ubiquitous"
+    },
+    {
+        "id": 6,
+        "name": "TypeScript",
+        "category": "Language",
+        "description": "The React framework for full-stack web applications with hybrid static & server rendering",
+        "icon": "",
+        "rating": "4.9",
+        "difficulty": "Intermediate",
+        "badge": "Essential"
+    }
+]
