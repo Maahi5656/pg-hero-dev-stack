@@ -19,12 +19,17 @@ const TechStack = ({selectedTech, setSelectedTech}:ISelectedtechnology) => {
         setSelectedTech(remainingTech);
     }
 
+    const handleRemoveAll=()=>{
+        
+        setSelectedTech([]);
+    }
+
     return (
         <div className='w-full rounded-[12px] border border-slate-200 bg-white p-4 shadow-sm'>
             <h2 className='text-[16px] font-bold text-[#)F172A]'>Your Stack</h2>
             <p className='m-1 text-[10px] font-medium text-[#94A3B*]'>{ selectedTech.length } Technology Selected</p>
             {
-                selectedTech.map((tech, index)=>{
+                selectedTech.length > 0 ? selectedTech.map((tech, index)=>{
                     return (
                         <div key={index} className="tech-icon mt-4 roundded-[8px] border border-slate-200 bg-white px-3 py-2.5">
                             <div className='flex items-center justify-between'>
@@ -48,7 +53,18 @@ const TechStack = ({selectedTech, setSelectedTech}:ISelectedtechnology) => {
 
                         </div>
                     )
-                })
+                }) 
+
+                :  <div>
+                    <p className='border-3 border-slate-300 border-dotted rounded p-5 text-center'>Your Stack Is Empty</p>
+                </div>
+            }
+            {
+                selectedTech.length > 0 &&         
+                (   <div className='pt-[25px]'>
+                        <button onClick={handleRemoveAll} className='border-2 font-bold border-red-500 rounded text-red-500 text-center w-[100%] cursor-pointer'>Remove All</button>
+                    </div>
+                )
             }
 
         </div>

@@ -50,6 +50,18 @@ const Footer = () => {
                   
                 </div>
             </div>
+            <hr className='text-[#64748B]' />
+            <div className="flex justify-between items-center">
+                <div>
+                    <p className='text-[#64748B]'>Dev Stack. All Rights Reserved</p>
+                </div>
+                <div>
+                    <ul className='flex justify-between py-4'>
+                        <li><a className='px-1 text-[#64748B]' href="#">Privacy</a></li>
+                        <li><a className='px-1 text-[#64748B]' href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
     );
 };
