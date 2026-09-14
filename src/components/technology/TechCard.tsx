@@ -1,6 +1,6 @@
 import { type Dispatch, type SetStateAction } from 'react';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
 import type { ITechnology } from '../../types/technologyTypes'
 
@@ -9,14 +9,18 @@ interface ITechCardProps{
     technology: ITechnology;
     selectedTech: ITechnology[];
     setSelectedTech: Dispatch<SetStateAction<ITechnology[]>>;
+    // isAdded: boolean;
+    // setIsAdded:  Dispatch<SetStateAction<boolean>>;
 }
 
 const TechCard = ({technology, selectedTech, setSelectedTech}: ITechCardProps) => {
 
-    const [isAdded, setIsAdded] = useState(false);
+    // const [isAdded, setIsAdded] = useState(false);
+
+    const techAdded = selectedTech.some(tech => tech.id === technology.id);
 
     const handleAdded=()=>{
-        setIsAdded(true);
+        // setIsAdded(true);
         setSelectedTech([...selectedTech, technology]);
     }
 
@@ -43,10 +47,10 @@ const TechCard = ({technology, selectedTech, setSelectedTech}: ITechCardProps) =
                   <div className="card-actions">
                     <button 
                         className='block text-center bg-black p-5 text-[#fff] leading-1 cursor-pointer'
-                        disabled={ isAdded ? true : false }
+                        disabled={ techAdded ? true : false }
                         onClick={handleAdded}
                     >
-                     { isAdded === true ? "Added" : "Add To Stack" }   
+                     { techAdded === true ? "Added" : "Add To Stack" }   
                     </button>
                   </div>
                 </div>
